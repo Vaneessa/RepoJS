@@ -85,13 +85,13 @@ console.log(remerasColor);
 
 //Ej4
 
-const Uno = ["Rubia", 5,7,"Marta"];
-const Dos = ["Morocha",6,9,"Claudia"];
-const nuevoArray = Uno.concat(Dos);
+const prendasUno = ["pollera", "saco", "bufanda","pañuelo"];
+const prendasDos = ["guante","campera","bota"];
+const nuevoArray = prendasUno.concat(prendasDos);
+
+nuevoArray.push('cartera');
 
 console.log(nuevoArray);
-
-nuevoArray.push('pepito');
 console.log(nuevoArray.length);
 
 
