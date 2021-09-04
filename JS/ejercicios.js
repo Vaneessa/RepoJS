@@ -103,7 +103,7 @@ console.log(nuevoArray.length);
 //-------------------------------------------Fin entrega clase 21/08----------------------------------------------------//
 
 
-//-------------------------------------------Pruebas DOM clase 28/08----------------------------------------------------//
+//-------------------------------------------Entrega STORAGE, JSON y DOM clase 28/08-----------------------------------//
 
 //EJ1 Mensaje de bienvenida
 
@@ -170,4 +170,4 @@ let plantillaEjemplo  = `Estilo: ${pantalon.estilo} Talle: ${pantalon.talle} Tel
 
 console.log(plantillaEjemplo);
 
-//-----------------------------------------Fin Pruebas DOM clase 28/08----------------------------------------------------//
+//-----------------------------------------Fin -Entrega STORAGE, JSON y DOM clase 28/08-------------------------------//
