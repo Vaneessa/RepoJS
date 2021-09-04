@@ -1,4 +1,4 @@
-//---Entrega clase 14/08---//
+//--------------------------------------------------Entrega clase 14/08-----------------------------------------------------//
 
 //Ejemplo 1 con while
 
@@ -21,11 +21,11 @@
     //let promedio = (parseFloat(notaUNO) + parseFloat(notaDos) + parseFloat(notaTres)) /3; document.getElementById('promedio').innerHTML = promedio; 
     //}
 
-//---Fin entrega clase 14/08---//
+//--------------------------------------------------Fin entrega clase 14/08------------------------------------------------//
 
 
 
-//---Entrega clase 21/08 primeros OBJETOS/ARRAYS para simulador de compra de indumentaria---//
+//--------------Entrega clase 21/08 primeros OBJETOS/ARRAYS para simulador de compra de indumentaria-----------------------//
 
 //Ej 1
 
@@ -58,21 +58,25 @@ console.log(ShortUno);
 
 let remeras = [
    {
+     "producto": "Remera Spring",
      "color": "blanco",
      "tipo": "algodón",
      "talle": 1
    },
    {
+     "producto": "Remera Summer",
      "color": "rojo",
      "tipo": "seda",
      "talle": 5
    },
    {
+      "producto": "Remera Galaxi",
       "color": "azul",
       "tipo": "modal",
       "talle": 2
    },
    {
+      "producto": "Remera Ocean",
       "color": "azul",
       "tipo": "lycra",
       "talle": 3
@@ -96,4 +100,74 @@ console.log(nuevoArray.length);
 
 
 
-//---Fin entrega clase 21/08---//
+//-------------------------------------------Fin entrega clase 21/08----------------------------------------------------//
+
+
+//-------------------------------------------Pruebas DOM clase 28/08----------------------------------------------------//
+
+//EJ1 Mensaje de bienvenida
+
+localStorage.setItem('bienvenido', '¡Bienvenido a mi tienda!');
+
+let mensajeBienvenida =  localStorage.getItem('bienvenido');
+
+console.log(mensajeBienvenida);
+
+
+
+//EJ2 Usando objeto pantalon de la entrega anterior
+
+const usandoJSON    = JSON.stringify(pantalon);
+
+console.log(usandoJSON); 
+console.log(typeof pantalon); 
+console.log(typeof usandoJSON);  
+
+localStorage.setItem("pantalon", usandoJSON);
+
+const pantalon2 = JSON.parse(localStorage.getItem("pantalon"));
+console.log(pantalon2.estilo);      
+
+
+//EJ3 para mostrar u ocultar un elemento del HTML a partir del id del div
+
+function miFuncion() {
+   var x = document.getElementById('ropa');
+   if (x.style.display === 'none') {
+       x.style.display = 'block';
+   } else {
+       x.style.display = 'none';
+   }
+}
+
+//EJ4 Mostrar por consola a partir de elementos del HTML por id O class
+
+let div = document.getElementById("uno");
+let h2 = document.getElementById("texto");
+console.log(div.innerHTML);
+console.log(h2.innerHTML);
+
+let probando = document.getElementsByClassName("pruebo");
+console.log(probando[0].innerHTML);
+console.log(probando[1].innerHTML);
+console.log(probando[2].innerHTML);
+
+
+//EJ5 creando nuevo elemento a partir del array 'remeras' creado en entrega previa
+
+for (const otraRemera of remeras) {
+   let nuevoContenedor = document.createElement("div");
+   nuevoContenedor.innerHTML = `<h4> Producto: ${otraRemera.producto}</h4>
+                           <p>Color: ${otraRemera.color}</p>
+                           <p>Tipo: ${otraRemera.tipo}</p>
+                           <p>Talle: ${otraRemera.talle}</b>`;
+   document.body.appendChild(nuevoContenedor);
+}
+
+//EJ6 Plantilla a partir de objeto pantalon de la entrega previa
+
+let plantillaEjemplo  = `Estilo: ${pantalon.estilo} Talle: ${pantalon.talle} Tela: ${pantalon.tela} Color: ${pantalon.color}`;
+
+console.log(plantillaEjemplo);
+
+//-----------------------------------------Fin Pruebas DOM clase 28/08----------------------------------------------------//
