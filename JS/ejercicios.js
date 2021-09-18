@@ -33,9 +33,26 @@ const pantalon = { estilo: "Foxy",
                    talle: 39,
                    tela: "jean",
                    color: "rojo"};
+
+
+const pantalon1 = { estilo: "Flower",
+                   talle: 36,
+                   tela: "jean",
+                   color: "azul"};   
                    
-console.log(pantalon.talle);
-console.log(pantalon.estilo.toUpperCase());
+const pantalon4 = { estilo: "Summer",
+                   talle: 28,
+                   tela: "jean",
+                   color: "amarillo"};
+
+const pantalon3 = { estilo: "Spring",
+                   talle: 39,
+                   tela: "jean",
+                   color: "rojo"};
+
+console.log(pantalon3.talle);
+console.log(pantalon1.tela);
+console.log(pantalon4.estilo.toUpperCase());
 
 
 //Ej2
@@ -142,9 +159,9 @@ function miFuncion() {
 
 //EJ4 Mostrar por consola a partir de elementos del HTML por id O class
 
-let div = document.getElementById("uno");
+
 let h2 = document.getElementById("texto");
-console.log(div.innerHTML);
+
 console.log(h2.innerHTML);
 
 let probando = document.getElementsByClassName("pruebo");
@@ -171,3 +188,42 @@ let plantillaEjemplo  = `Estilo: ${pantalon.estilo} Talle: ${pantalon.talle} Tel
 console.log(plantillaEjemplo);
 
 //-----------------------------------------Fin -Entrega STORAGE, JSON y DOM clase 28/08-------------------------------//
+
+// Eventos ejemplos con input y boton
+
+function mostrarIngreso() {
+   document.getElementById("ingreso").innerHTML = "Ingresaste el siguiente dato: " + document.getElementById("input").value;
+ }
+ 
+ 
+ let boton = document.getElementById("boton");
+ boton.onclick = () => {console.log("El usuario hizo un click")};
+ boton.onmousemove = () => {console.log("El usuario paso el mouse por el boton")}
+
+
+ //------------------------------------------Pruebas incorporando JQUERY ----------------------------------------------------//
+
+ //EJ1 
+
+ $( document ).ready(function() {
+   console.log('Ya se encuentra listo el DOM.');
+});
+
+//EJ2 agregar un elemento a EVENTOS (append)
+
+ $('#prueboJQ').append("<div>Prueba APPEND1</div>", "<div>Prueba APPEND2</div>" );
+
+ //EJ3 agregar un elemento a EVENTOS (prepend)
+
+ $("#mostrarIng").prepend('<button id="botonUno">PruebaPREPEND</button>');
+ 
+ $("#botonUno").click(function () { 
+     console.log(this);
+ });
+
+ //EJ 4 con change
+
+ $('#campoID').change(function(){
+   alert('Se muestra esta alerta cuando cambia el valor del campo con el id "campoID"'); 
+});
+

@@ -17,6 +17,33 @@
   </head>
 
   <body>
+
+    <!-- Comienzo Nav -->
+  
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">ONLINE SHOP</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Nosotros</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link" href="#">Productos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contacto</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Fin Nav-->
   
     <!-- Prueba con función en el form
 
@@ -47,42 +74,67 @@
     
      Fin prueba con función en el form--> 
 
-    <!--------------------------------------Entrega STORAGE, JSON y DOM clase 28/08----------------------------------> 
-      <div id="uno">
-        <h2 id="texto">Mostrar/ocultar imágen</h2>
+    <!--------------------------------------------------- Contenido -------------------------------------------------->
+
+
+    <br>
+    <div id="uno">
+      <h2 id="texto">Mostrar/ocultar imágen</h2>
+    </div>
+
+    <div class="content">
+      <button onclick="miFuncion()" id="pe">Ocultar</button>
+      <div id="ropa">
+        <img src="IMG/vestido.jpg" class="vestido-img">
       </div>
+    </div>
 
-      <div class="content">
-        <button onclick="miFuncion()">Ocultar</button>
-        <div id="ropa">
-          <img src="IMG/pantalonesBlancos.jpg" class="pantalones-img">
-        </div>
-      </div>
+    <br>
+    <h2>Eventos</h2>
+    <br>
+    <div id="mostrarIng">
+      <input type="text" placeholder="Por favor ingresa un dato..." onkeyup="mostrarIngreso()" id="input"><br><br>
+      <div id="ingreso"></div>
+      <button id="boton">Soy un boton</button>
+    </div>
 
-      <h2> Elemento para mostrar en consola por ID</h2>
+    <h2> Mostrar en consola por ID</h2>
 
-      <div>
-        <div class="pruebo">Pantalones</div>
-        <div class="pruebo">Remeras</div>
-        <div class="pruebo">Shorts</div>
-      </div>
+    <div id="prueboJQ">
+      <div class="pruebo">Pantalones</div>
+      <div class="pruebo">Remeras</div>
+      <div class="pruebo">Shorts</div>
+      <div class="pruebo">Bufanda</div>
+      <div class="pruebo">Guante</div>
+    </div>
+    <br>
 
-      <h2>Crear elementos nuevos a partir de JS</h2>
+    <h2>Ejemplo con change</h2>
+
+    <div>
+      <h5>Prueba con alert cuando cambia y enter.</h5>
+      <input type="text" id="campoID" />     
+    </div>   
+    <br>
+
+    <h2>Nuevos elementos</h2>
+    <br>
 
 
 
-     <!--------------------------------------Entrega STORAGE, JSON y DOM clase 28/08----------------------------------->  
+  <!---------------------------------------------- Fin Contenido  -------------------------------------------------->  
 
      <!--Comienzo Footer-->
 
       <div class="bg-dark text-white">
-      <p class="text-center p-4 m-0">Ejemplos de ciclos y funciones en JS</p>
+      <p class="text-center p-4 m-0">Entregas semanales de ejercicios</p>
       </div>
 
   <!--Fin Footer-->
 
   <!--Archivo JS-->
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/ejercicios.js"></script>
     
   </body>
