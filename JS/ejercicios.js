@@ -227,3 +227,25 @@ function mostrarIngreso() {
    alert('Se muestra esta alerta cuando cambia el valor del campo con el id "campoID"'); 
 });
 
+//---------------------------------------------Pruebas con AJAX ---------------------------------------------------------------//
+
+//Ej mostrando el contenido del archivo datos.json en HTML por boton
+
+const URLJSON = "JSON/datos.json"
+
+$("#btn1").click(() => {
+$.getJSON(URLJSON, function (respuesta, estado) {
+if(estado === "success"){
+let misDatos = respuesta;
+for (const dato of misDatos) {
+$("#mostrarJson").prepend(`<div>
+<h3>${dato.producto}</h3>
+<p> ${dato.color}</p>
+</div>`)
+}
+}
+});
+});
+
+//-----------------------------------------------------------------------------------------------------------------------------//
+

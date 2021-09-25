@@ -1,0 +1,26 @@
+[
+    {
+      "producto": "Camisa Spring",
+      "color": "blanco",
+      "tipo": "algodón",
+      "body": "talle 1"
+    },
+    {
+      "producto": "Camisa Summer",
+      "color": "azul",
+      "tipo": "algodón",
+      "body": "talle 2"
+    },
+    {
+      "producto": "Camisa Spring",
+      "color": "rojo",
+      "tipo": "algodón",
+      "body": "talle 3"
+    },
+    {
+        "producto": "Camisa Galaxi",
+        "color": "amarillo",
+        "tipo": "algodón",
+        "body": "talle 2"
+      }
+  ]
